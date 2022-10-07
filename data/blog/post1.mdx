@@ -3,13 +3,13 @@ title: Getting on the internet
 date: '2022-02-17'
 tags: ['ipv4', 'OSI', 'foundation', 'history']
 draft: false
-summary: setting up a private home network with VLAN & Subnetworking, a student’s perspective
+summary: an overview of the internet, a student’s perspective
 images: [/static/images/a1.png', '/static/images/a2.png, static/images/bell.webp, static/images/pline.webp']
 layout: PostLayout
 canonicalUrl:
 ---
 
-# Setting up a private home network: VLAN & Subnetworking, a student’s perspective
+# A short history of the internet for networking students
 
 ### Preface
 
@@ -57,9 +57,9 @@ As a networking engineer, you should become familiar with the OSI model. Several
 Each layer groups a number of technologies that perform various functions in the network.  
 </p>
 
-Referencing the above model, your public IP address (AKA IP) exists in layer 3, the Network layer. Your IP will be utilized to identify yourself and other computers in network. In essence, you are purchasing access to the internet through an ISP that acts as a courier service to send and receive data for you through the internetworked mesh that is the ‘internet.’ Further discussion on ISP particulars is not pertinent at this moment, suffice to say that telecommunications companies run high-capacity cables to coordinate web traffic between hosts and servers, utilizing a specialized L3 routing protocol called [Border Gateway Protocol](https://www.wikiwand.com/en/Border_Gateway_Protocol) (BGP). A tertiary concept you may have heard about is “[edge computing](https://www.wikiwand.com/en/Edge_computing#).” Per Wikipedia, “The origins of edge computing lie in [content distributed networks](https://www.wikiwand.com/en/Content_delivery_network) that were created in the late 1990s to serve web and video content from edge [servers](<https://www.wikiwand.com/en/Server_(computing)>) that are deployed closer to users for quick access.
+Referencing the above model, your public IP address (AKA IP) exists on layer 3, the Network layer. Your IP will be utilized to identify yourself and other computers in network. In essence, you are purchasing access to the internet through an ISP that acts as a courier service to send and receive data for you through the internetworked mesh that is the ‘internet.’ Further discussion on ISP particulars is not pertinent at this moment, suffice to say that telecommunications companies run high-capacity cables to coordinate web traffic between hosts and servers, utilizing a specialized L3 routing protocol called [Border Gateway Protocol](https://www.wikiwand.com/en/Border_Gateway_Protocol) (BGP). A tertiary concept you may have heard about is “[edge computing](https://www.wikiwand.com/en/Edge_computing#).” Per Wikipedia, “The origins of edge computing lie in [content distributed networks](https://www.wikiwand.com/en/Content_delivery_network) that were created in the late 1990s to serve web and video content from edge [servers](<https://www.wikiwand.com/en/Server_(computing)>) that are deployed closer to users for quick access.
 
-Returning to our public IPv4 address, we may realize that one address is not enough for the many devices and users that exists in our household. That would be correct, thus our address must be shared somehow. A hardware device called a router can be introduced to solve this problem, and some others.
+Returning to our public IPv4 address, we may realize that one address is not enough for the many devices and users that exists in our household. Remember, public IPs must be unique. Thus, our address must be shared somehow, to allow for multiple users to still utilize one address while keeping their traffic separate. A hardware device called a router can be introduced to solve this problem through a process called Port Address Translation (PAT).
 
 As an aside, in networking there are often multiple types of the same thing. I think of this as a reminder of the duplicative nature of the system. For instance, data has many names or forms based on its context and position in the system. Each layer of the model has its own protocol data unit (PDU): L1 Bits; L2 Frames; L3 Packets; L4 Segments. As you learn about how the network functions, you will understand how the data continually modified, packaged and re-packaged to coordinate its travel along the network path.
 
