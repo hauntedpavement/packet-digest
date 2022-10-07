@@ -13,7 +13,13 @@ canonicalUrl:
 
 ### Preface
 
- A student studying an immense topic such as the internet is, may find themselves having difficulty finding where to begin their investigation. Reviewing history is a natural place to start, and relating that to the present can bring the new perspective to the modern technologies we take advantage of today. With this in mind, I will discuss what I have found about the start of the internet and how it has evolved from an experimental governmental research project, to the defining medium of the 21st century. A progression of blog posts will detail the history, and in parallel, discus the construction and implementation of an “homelab” which includes implementing a private home network. I will proceed to work through the steps, reflecting along the way to frame the process as an educational exercise.
+ A student studying an immense topic like the internet may find themselves having difficulty finding where to begin. Reviewing history is a natural place to start, and relating that to the present can bring the new perspective to the modern technologies we take advantage of today. With this in mind, I will discuss what I have found about the start of the internet and how it has evolved from an experimental governmental research project, to the defining medium of the 21st century. A progression of blog posts will detail the history, and in parallel, discus the construction and implementation of a private home network. I will proceed through connecting to an ISP, setting up a private access point, and ultimately running several networking central technologies such as:
+
+- software defined routing via Intel NIC card + old pc + pfSense  
+- Hypervisor ProxMox with Windows Server 2019 & Security Onion (Wazuh)
+- pfSense addons pfBlocker, Tailscale (VPN), Suricata
+
+hopefully reflecting with lessons learned along the way, to frame the process as an educational exercise.
 
 ## What is having the internet?
 
@@ -69,6 +75,6 @@ For out of LAN traffic (AKA inter-network traffic), L3 [Network Layer](https://w
 
 To summarize, the TCP/IP protocol is only one of many L3 “Network” protocols that go about executing OSI’s dictum: the relaying of [packets](<https://www.wikiwand.com/en/Packet_(information_technology)>) from one [network segment](https://www.wikiwand.com/en/Network_segment) to another by [nodes](<https://www.wikiwand.com/en/Node_(networking)>) in a [computer network](https://www.wikiwand.com/en/Computer_network) via [packet forwarding](https://www.wikiwand.com/en/Packet_forwarding). Including [routing](https://www.wikiwand.com/en/Routing) packets through intermediate [routers.](<https://www.wikiwand.com/en/Router_(computing)>). A network trace route command can be used to readback information concerning the packet's travel, e.g., how many “hops” (trips between routers) a packet has made.
 
-These “Network” protocols are algorithmic logic that are usually run-on ASIC hardware embedded, although software implementations exist. For example, three routing protocols are supported by the networking BSD OS [pfSense](https://www.wikiwand.com/en/PfSense). In the next post, we will plan and set up a home network utilizing both a pfSense computer and a traditional [ASIC router/L3 switch](https://mikrotik.com/product/RB2011UiAS-2HnD-IN).   
+These “Network” protocols are algorithmic logic that are usually run-on ASIC hardware embedded, although software implementations exist. For example, three routing protocols are supported by the networking BSD OS [pfSense]( https://www.wikiwand.com/en/PfSense). In the next post, we will plan and set up a home network utilizing both a pfSense computer and a traditional [ASIC router/L3 switch]( https://mikrotik.com/product/RB2011UiAS-2HnD-IN).   
 
 
