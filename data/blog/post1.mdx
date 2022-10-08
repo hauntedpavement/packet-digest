@@ -14,23 +14,25 @@ canonicalUrl:
 ### Preface
 
  A student studying an immense topic like the internet may find themselves having difficulty finding where to begin. Reviewing history is a natural place to start, and relating that to the present can bring the new perspective to the modern technologies we take advantage of today. With this in mind, I will discuss what I have found about the start of the internet and how it has evolved from an experimental governmental research project, to the defining medium of the 21st century. A progression of blog posts will detail the history, and in parallel, discus the construction and implementation of a private home network. I will proceed through connecting to an ISP, setting up a private access point, and ultimately running several networking central technologies such as:
+	- hardware [Mikrotik](https://mikrotik.com/) Router and Synology Wi-Fi
+- software defined routing via Intel NIC card + old pc + [pfSense](https://www.pfsense.org/)  
+- pfSense addons [pfBlocker](https://docs.netgate.com/pfsense/en/latest/packages/pfblocker.html) (firewall), [Tailscale](https://tailscale.com/) (VPN), [Suricata]( https://suricata.io/features/) (IDS/IPS)
+- [ProxMox](https://www.proxmox.com/en/) (Hypervisor) with Windows Server 2019 & [Security Onion](https://securityonionsolutions.com/software/)
 
-- software defined routing via Intel NIC card + old pc + pfSense  
-- Hypervisor ProxMox with Windows Server 2019 & Security Onion (Wazuh)
-- pfSense addons pfBlocker, Tailscale (VPN), Suricata
-
-hopefully reflecting with lessons learned along the way, to frame the process as an educational exercise.
+hopefully reflecting along the way with lessons learned, to frame the process as an educational exercise.
 
 ## What is having the internet?
 
-If you want to listen to the transmission of sound, we need a radio an object with an antenna to catch electromagnetic signals, with a corresponding audio receiver attached to translate that signal back into sound, through a speaker. For television, we do much the same, somehow receiving a compound signal of audio and video information through radio waves or copper cabling. The earliest implementation of this was Community Antenna Television (CATV), which consisted of a community antenna that would receive the broadcast signal and then rebroadcast it locally (just like today's network affiliates). Phones similarly rely on a networking of cables that enable their messages to be distributed and rebroadcast, as they travel to their destination. Just as cable TV utilized existing phone infrastructure, the internet can utilize both previous infrastructures today: [coaxial cable](https://www.wikiwand.com/en/Coaxial_cable) and two wire [phone line](https://www.wikiwand.com/en/Telephone_cable).
+If you want to listen to the transmission of sound there needs to be air, to carry the sound energy, and an ear or otherwise device to “hear” the noise. No doubt inspired by this natural system, humans copied this method, abstracting it to the telephone wire via the telegraph (Alexander Graham Bell 1874) and then using the air via electromagnetic waves (Guglielmo Marconi 1895).  
+
+Whether through air or wire, we need a medium to send signals and a corresponding receiver to catch and decode them. With a radio, the signal receiver is attached to a speaker translate that signal back into sound, although it can now be wholly saved digitally for playback later. For television, we do much the same, somehow receiving a compound signal of audio and video information through radio waves or wire--often coaxial copper cabling. To help disperse these signals, a network of sorts was created for television. An early implementation of this was Community Antenna Television (CATV), which consisted of a community antenna that would receive a broadcast signal and then rebroadcast it locally, just like today's network affiliates. Phones similarly rely on a networking of cables that enable their messages to be distributed and rebroadcast, as they travel to their destinations. Seen in context with these technologies, the internet can be seen as a natural progression of these early information exchange networks. And just as cable TV utilized existing phone infrastructure, the internet utilizes both previous infrastructures today: [coaxial cable](https://www.wikiwand.com/en/Coaxial_cable) and two wire [phone line](https://www.wikiwand.com/en/Telephone_cable).
 
 ![pline](/static/images/pline.webp)
 <p>
 Cross section of telephone cable of 1,800 twisted pairs. Year 1922.
 </p>
 
-All of the above technologies were and are technologies whose central role was to distribute any data that could be recorded. This process is akin to quantification: In mathematics and empirical science, quantification (or quantitation) is the act of counting and measuring that maps human sense observations and experiences into quantities. This quantification process has enabled us to collect and share data as never before. 
+All of the above technologies were and are technologies whose central role was to distribute any data that could be recorded. This process is akin to quantification: In mathematics and empirical science, quantification (or quantitation) is the act of counting and measuring that maps human sense observations and experiences into quantities [^1]. This quantification process has enabled us to collect and share data as never before. 
 
 For affect, just think how constrained one was to place and time, as say, if you wanted to attend a play. You would need a ticket to reserve a physical space at a specific, unique time for you to experience the production as it occurs on stage. With quantification (i.e. video recording), that experience can mostly be recorded and recreated on demanding, freeing it from the strictures of time and place. This sounds like a fairly powerful thing. So, how does one "internet?" Well, let's just say it is exceedingly more complicated than the former technologies.
 
@@ -75,6 +77,9 @@ For out of LAN traffic (AKA inter-network traffic), L3 [Network Layer](https://w
 
 To summarize, the TCP/IP protocol is only one of many L3 “Network” protocols that go about executing OSI’s dictum: the relaying of [packets](<https://www.wikiwand.com/en/Packet_(information_technology)>) from one [network segment](https://www.wikiwand.com/en/Network_segment) to another by [nodes](<https://www.wikiwand.com/en/Node_(networking)>) in a [computer network](https://www.wikiwand.com/en/Computer_network) via [packet forwarding](https://www.wikiwand.com/en/Packet_forwarding). Including [routing](https://www.wikiwand.com/en/Routing) packets through intermediate [routers.](<https://www.wikiwand.com/en/Router_(computing)>). A network trace route command can be used to readback information concerning the packet's travel, e.g., how many “hops” (trips between routers) a packet has made.
 
-These “Network” protocols are algorithmic logic that are usually run-on ASIC hardware embedded, although software implementations exist. For example, three routing protocols are supported by the networking BSD OS [pfSense]( https://www.wikiwand.com/en/PfSense). In the next post, we will plan and set up a home network utilizing both a pfSense computer and a traditional [ASIC router/L3 switch]( https://mikrotik.com/product/RB2011UiAS-2HnD-IN).   
+These “Network” protocols are algorithmic logic that are usually run-on ASIC hardware embedded, although software implementations exist. For example, three routing protocols are supported by the networking BSD OS [pfSense]( https://www.wikiwand.com/en/PfSense). In the next post, we will plan and set up a home network utilizing a pfSense computer and a router.
+
+### References
+[^1]: https://www.wikiwand.com/en/Quantification_(science)
 
 
