@@ -21,7 +21,7 @@ canonicalUrl:
 
 hopefully reflecting along the way with lessons learned, to frame the process as an educational exercise.
 
-<TOCInline toc={props.toc} exclude="Preface" toHeading={2} asDisclosure />
+<TOCInline toc={props.toc} exclude="Preface" fromHeading={2} toHeading={2} asDisclosure />
 
 ## What is having the internet?
 
@@ -47,6 +47,8 @@ Alexander Graham Bell makes the first long distance telephone call, circa late 1
 
 What can we do to buy a ticket to the internet? One might start with an "access point" that is a unique 32-bit IPv4 or 128 Ipv6 numbered address leased to you by an internet service provider (ISP). This will act as your name on the network, and you will use it as a home address so that you can send and receive messages from its “location” as a node belonging to the network. Being a core item, this address is found on layer one. Layer one of what? Well, the internet is often summarized abstractly as a discretely separated, but interworking, layered model. As you will see, the layers pass data to one another by packaging in with headers and footers. Regarding the addressing system, a user actually will have two addresses, one physical for [layer one (L1)](https://www.wikiwand.com/en/OSI_model#/Layer_architecture) and the other abstracted according to the domain name system that was implemented for internet protocol (IPv4 or IPv6). The IP address exists above layer one on layer two (the data link layer) and is a necessary component to operate as host node on the network.
 
+## Early implementations of packet-switching protocols
+
 The above mentioned IP address is part of the [Internet protocol suite (TCP/IP Model](https://www.wikiwand.com/en/Internet_protocol_suite) (Transmission Control Protocol/ Internet Protocol), the core component of the modern internet. It was initially developed by the Defense Advanced Research Projects Agency ([DARPA](https://www.wikiwand.com/en/DARPA)) in the late 1960s, and is still now the utilized protocol. In your studies, you will find that these protocols are responsible for ordering, verifying and transmitting data. But before that discussion, let us review how the TCP/IP standard came to fruition.
 
 Today, the technical standards underlying the internet protocol suite are maintained by a division of the United Nations: the [Internet Engineering Task Force](https://www.wikiwand.com/en/Internet_Engineering_Task_Force) (IETF).
@@ -59,6 +61,8 @@ To get a sense of the net’s lineage one can look to the [The International Tel
 > (being published in 1976) ...it is one of the oldest packet-switching communication protocols available; it was developed several years before IPv4 (1981) and the OSI Reference Model (1984). The protocol suite is designed as three conceptual layers, which correspond closely to the lower three layers of the seven-layer OSI model. It also supports functionality not found in the OSI network layer.
 
 That being said, for practical purposes, it's sufficient today to just understand the OSI model and the TCP/IP protocol, as well as the many improvements that have been added by IETF and vendors. The internet’s history is messy, a side effect of its collaborative, iterative nature that has its roots in the academic and institutional R&D domains.
+
+## OSI and TCP/IP to send PDUs
 
 As a networking engineer, you should become familiar with the OSI model. Several have been formulated but for this blog, I will exclusively reference the International Organization for Standardization’s (ISO) 7-layer model that was published in 1984. Starting with layer 1 it goes: Physical, Data Link, Network, Transport, Session, Presentation, and Application.
 
@@ -83,5 +87,3 @@ These “Network” protocols are algorithmic logic that are usually run-on ASIC
 
 ### References
 [^1]: https://www.wikiwand.com/en/Quantification_(science)
-
-
