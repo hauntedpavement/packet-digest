@@ -8,12 +8,18 @@ images: [/static/images/a1.png', '/static/images/a2.png, static/images/bell.webp
 layout: PostLayout
 canonicalUrl:
 ---
-
 # A short history of the internet for networking students
 
-### Preface
+<TOCInline toc={props.toc} exclude="Preface" fromHeading={2} toHeading={2} asDisclosure />
 
- A student studying an immense topic like the internet may find themselves having difficulty finding where to begin. Reviewing history is a natural place to start, and relating that to the present can bring the new perspective to the modern technologies we take advantage of today. With this in mind, I will discuss what I have found about the start of the internet and how it has evolved from an experimental governmental research project, to the defining medium of the 21st century. A progression of blog posts will detail the history, and in parallel, discus the construction and implementation of a private home network. I will proceed through connecting to an ISP, setting up a private access point, and ultimately running several networking centric enterprise technologies such as:
+### Preface
+As an academic discipline and millennium-defining global technology, computer networking, the simple act of computers sharing information, is an intriguing topic to examine. It's an extremely convoluted one, as well, as its creation followed no definitive roadmap nor had a singular author. Consequently, the technology relies on a heterogeneous mixture of protocols, created by many institutions but in a cooperative, standards-based way. The Internet can be as much a lesson in 21st techno-bureaucracy, both corporate and academic, as much as it is the technical disciple of organizing 0s and 1s for transmission and reception. 
+
+Studying an immense topic like the internet can feel overwhelming, after all, it's a technology that has expanded to serve 5.07 billion people daily—that's 63.5% of the population! Choosing to study its history first is a good idea as it can be a point of departure that is both an interesting introductory lesson and illustrative of foundational knowledge. Below will be a cursory review of the internet's history, relating it to the present to hopefully bring a fresher perspective to the modern technologies we take advantage of--and for granted, today. 
+
+After the history review, I will discuss what I have found about the start of the internet and then discuss the construction and implementation of a private computer network for enterprise applications. 
+
+I will detail the major steps: connecting to an ISP, setting up a private access point, and ultimately running several networking-centric enterprise technologies such as:
 - hardware [Mikrotik](https://mikrotik.com/) Router and Synology Wi-Fi
 - software defined routing via Intel NIC card + old pc + [pfSense](https://www.pfsense.org/)  
 - pfSense addons [pfBlocker](https://docs.netgate.com/pfsense/en/latest/packages/pfblocker.html) (firewall), [Tailscale](https://tailscale.com/) (VPN), [Suricata]( https://suricata.io/features/) (IDS/IPS)
@@ -21,11 +27,17 @@ canonicalUrl:
 
 hopefully reflecting along the way with lessons learned, to frame the process as an educational exercise.
 
-<TOCInline toc={props.toc} exclude="Preface" fromHeading={2} toHeading={2} asDisclosure />
-
 ## What is having the internet?
 
-If you want to listen to the transmission of sound there needs to be air, to carry the sound energy, and an ear or otherwise device to “hear” the noise. No doubt inspired by this natural system, humans copied this method, abstracting it to the telephone wire via the telegraph (Alexander Graham Bell 1874) and then using the air via electromagnetic waves (Guglielmo Marconi 1895).  
+If you want to listen to the transmission of sound there needs to be air, to carry the sound energy, and an ear or otherwise device to “hear” the noise. A simple form of noise creations, banging to things together, creates a [mechanical wave](https://www.wikiwand.com/en/Mechanical_wave). Armed with this information, we can give answer to the parable:
+
+    "If a tree falls in a forest and no one is around to hear it, does it make a sound?"
+
+    1) Yes, a sound will be made as the mechanical wave propogates itslef on nearby mediums like air or tree bark reverberating etc.
+
+    2) Yes/No, as it will only be heard if a device is present to detect and transfer the mechanical wave energy back to noise or information.
+
+Inspired by these natural systems, humans abstracted and applied these concepts to invent refined communications mediums utilizing metal telephone wire communication (the telegraph by Alexander Graham Bell in 1874) and wireless electromagnetic wave propagation via antennas (Guglielmo Marconi 1895). 
 
 Whether through air or wire, we need a medium to send signals and a corresponding receiver to catch and decode them. With a radio, the signal receiver is attached to a speaker translate that signal back into sound, although it can now be wholly saved digitally for playback later. For television, we do much the same, somehow receiving a compound signal of audio and video information through radio waves or wire--often coaxial copper cabling. To help disperse these signals, a network of sorts was created for television. An early implementation of this was Community Antenna Television (CATV), which consisted of a community antenna that would receive a broadcast signal and then rebroadcast it locally, just like today's network affiliates. Phones similarly rely on a networking of cables that enable their messages to be distributed and rebroadcast, as they travel to their destinations. Seen in context with these technologies, the internet can be seen as a natural progression of these early information exchange networks. And just as cable TV utilized existing phone infrastructure, the internet utilizes both previous infrastructures today: [coaxial cable](https://www.wikiwand.com/en/Coaxial_cable) and two wire [phone line](https://www.wikiwand.com/en/Telephone_cable).
 
@@ -88,4 +100,4 @@ To summarize, the TCP/IP protocol is only one of many L3 “Network” protocols
 These “Network” protocols are algorithmic logic that are usually run-on ASIC hardware embedded, although software implementations exist. For example, three routing protocols are supported by the networking BSD OS [pfSense]( https://www.wikiwand.com/en/PfSense). In the next post, we will plan and set up a home network utilizing a pfSense computer and a router.
 
 ### References
-[^1]: https://www.wikiwand.com/en/Quantification_(science)
+[^1]: https://www.wikiwand.com/en/Quantification%20(science)
