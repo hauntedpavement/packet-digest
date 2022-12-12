@@ -6,12 +6,12 @@ const siteMetadata = {
   language: 'en-us',
   theme: 'system', // system, dark or light
   siteUrl: 'https://packet-digest.vercel.app/',
-  siteRepo: 'https://github.com/hauntedpavement/packet-digest',
+  siteRepo: 'https://github.com/',
   siteLogo: '/static/images/logo.png',
   image: '/static/images/avatar.png',
   socialBanner: '/static/images/twitter-card.png',
   email: 'address@yoursite.com',
-  github: 'https://github.com/hauntedpavement',
+  github: 'https://github.com',
   twitter: 'https://twitter.com/Twitter',
   locale: 'en-US',
   analytics: {
