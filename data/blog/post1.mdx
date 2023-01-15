@@ -10,19 +10,19 @@ canonicalUrl:
 ---
 # A short history of the internet for networking students
 
-<TOCInline toc={props.toc} exclude="Preface" fromHeading={2} toHeading={2} asDisclosure />
 
 ### Preface
-As an academic discipline and millennium-defining global technology, computer networking, the simple act of computers sharing information, is an intriguing topic to examine. It's an extremely convoluted one, as well, as its creation followed no definitive roadmap nor had a singular author. Consequently, the technology relies on a heterogeneous mixture of protocols, created by many institutions but in a cooperative, standards-based way. The Internet can be as much a lesson in 21st techno-bureaucracy, both corporate and academic, as much as it is the technical disciple of organizing 0s and 1s for transmission and reception. 
+The internet stands for many things; a testament to the value of government-aided technological progress; 21st-century "design by committee" innovation; the new "electricity"; it was a lot of things, the technology that heralded in the information age. And analogous to the modern age, it's also complicated and dynamic, an ever-moving target of human innovation. Computer networking, the simple act of computers exchanging information, is an intriguing topic to examine. 
 
-Studying an immense topic like the internet can feel overwhelming, after all, it's a technology that has expanded to serve 5.07 billion people daily—that's 63.5% of the population! Choosing to study its history first is a good idea as it can be a point of departure that is both an interesting introductory lesson and illustrative of foundational knowledge. Below will be a cursory review of the internet's history, relating it to the present to hopefully bring a fresher perspective to the modern technologies we take advantage of--and for granted, today. 
+Tracing its development becomes convoluted quickly, as its creation followed no definitive roadmap nor had a singular inventor. The internet, like the culture it gave rise to, emanated from a cluster of smaller projects that had their roots in advancing telecommunications. Consequently, the internet is a jigsaw puzzle of protocols, created by many individual institutions to be later unified and coordinated by a central authority. Viewed this way, the Internet can be as much a lesson in 21st techno-bureaucracy, as it is in the technical disciple of organizing 0s and 1s for transmission and reception. 
 
-After the history review, I will discuss what I have found about the start of the internet and then discuss the construction and implementation of a private computer network for enterprise applications. 
+Studying an immense topic like the internet can feel overwhelming, after all, it's a technology that has expanded to serve 5.07 billion people daily—that's 63.5% of the population! Choosing to study its history first is a good idea as it can be a point of departure that is both an interesting introductory lesson and illustrative of foundational knowledge. Below will be a cursory review of the internet's history, relating it to the present to hopefully bring perspective to the modern technologies we take advantage of--and for granted, today. 
 
-I will detail the major steps: connecting to an ISP, setting up a private access point, and ultimately running several networking-centric enterprise technologies such as:
-- hardware [Mikrotik](https://mikrotik.com/) Router and Synology Wi-Fi
-- software defined routing via Intel NIC card + old pc + [pfSense](https://www.pfsense.org/)  
-- pfSense addons [pfBlocker](https://docs.netgate.com/pfsense/en/latest/packages/pfblocker.html) (firewall), [Tailscale](https://tailscale.com/) (VPN), [Suricata]( https://suricata.io/features/) (IDS/IPS)
+After the historical review, I will detail the construction and implementation of an small business Windows Hyper-V solution for ten end users, ultimately running several networking-centric enterprise technologies such as:
+- Routing Hardware [Mikrotik](https://mikrotik.com/) Router and Synology Wi-Fi
+- Virtualization Server is puprose built Supermicro MB + NVME + RAID5 
+- pfSense based Software Defined Routing via Intel NIC card + old PC + [pfSense](https://www.pfsense.org/)  
+- pfSense addons: [pfBlocker](https://docs.netgate.com/pfsense/en/latest/packages/pfblocker.html) (firewall), [Tailscale](https://tailscale.com/) (VPN), [Suricata]( https://suricata.io/features/) (IDS/IPS)
 - [ProxMox](https://www.proxmox.com/en/) (Hypervisor) with Windows Server 2019 & [Security Onion](https://securityonionsolutions.com/software/)
 
 hopefully reflecting along the way with lessons learned, to frame the process as an educational exercise.
@@ -68,7 +68,7 @@ The above mentioned IP address is part of the [Internet protocol suite (TCP/IP M
 Today, the technical standards underlying the internet protocol suite are maintained by a division of the United Nations: the [Internet Engineering Task Force](https://www.wikiwand.com/en/Internet_Engineering_Task_Force) (IETF).
 
 
-In addition to being familiar with this, one should know of the [OSI model](https://www.wikiwand.com/en/OSI_model), a conceptual model: a comprehensive design document for building networking systems. Reading internet history, you will find that many models have helped direct the internet’s evolution by giving structure to the myriad of different protocols and packet switching technologies that were devised in the 1970s and 80s. This period of history is known as the [protocol wars]. (https://www.wikiwand.com/en/Protocol_Wars)
+In addition to being familiar with this, one should know of the [OSI model](https://www.wikiwand.com/en/OSI_model), a conceptual model: a comprehensive design document for building networking systems. Reading internet history, you will find that many models have helped direct the internet’s evolution by giving structure to the myriad of different protocols and packet switching technologies that were devised in the 1970s and 80s. This period of history is known as the [protocol wars](https://www.wikiwand.com/en/Protocol_Wars).
 
 To get a sense of the net’s lineage one can look to the [The International Telecommunication Union (ITU)](https://www.wikiwand.com/en/International_Telecommunication_Union) another specialized United Nations agency for information and communication technologies that is the predecessor of the IETF. It was founded in 1865 by [Napoleon III](https://www.wikiwand.com/en/Napoleon_III) to direct the standardization of the telegraph. They have since published over 4000 recommendations. One of their contributions related to the internet is the European based standard [X.25](https://www.wikiwand.com/en/X.25):
 
@@ -100,4 +100,4 @@ To summarize, the TCP/IP protocol is only one of many L3 “Network” protocols
 These “Network” protocols are algorithmic logic that are usually run-on ASIC hardware embedded, although software implementations exist. For example, three routing protocols are supported by the networking BSD OS [pfSense]( https://www.wikiwand.com/en/PfSense). In the next post, we will plan and set up a home network utilizing a pfSense computer and a router.
 
 ### References
-[^1]: 
+[^1]: {/*  */}
