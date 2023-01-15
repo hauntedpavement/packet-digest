@@ -1,8 +1,8 @@
 ---
 name: Danby
 avatar: /static/images/avatar.png
-occupation: Personal Computer Ambassador 
-company: Haunted Pavement
+occupation:  
+company: 
 email: address@yoursite.com
 twitter: https://twitter.com/Twitter
 linkedin: https://www.linkedin.com
